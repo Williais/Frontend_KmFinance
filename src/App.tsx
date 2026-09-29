@@ -1,4 +1,3 @@
-
 import './App.css'
 
 function App() {
@@ -6,7 +5,10 @@ function App() {
 
   return (
     <>
-     <h1>Hello World</h1>
+      <div className="text-6xl font-bold underline text-laranja-motor">
+        hello World
+      </div>
+
     </>
   )
 }
