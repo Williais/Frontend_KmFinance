@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="justify-center bg-background-primario  flex h-screen flex-col items-center">
+    <div className="justify-start pt-5 bg-background-primario  flex h-screen flex-col items-center">
       
       <Navbar></Navbar>
 
