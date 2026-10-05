@@ -1,9 +1,13 @@
 import {Avatar, AvatarBadge, AvatarFallback, AvatarImage} from "../ui/avatar"
-import { Button } from "../ui/button"
-import { CircleFadingArrowUpIcon } from "lucide-react"
 import perfil from "../assets/img1.jpg"
 
-export function Navbar(){
+export function Header(){
+
+    const data = new Date()
+    const ano = data.getFullYear()
+    const mes = data.getMonth()
+
+    const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
     return(
         <div className="border-b-2 border-amarelo-alerta w-full flex items-center justify-between pb-5  max-w-xl">
             <div className="flex items-center gap-3">
@@ -14,10 +18,12 @@ export function Navbar(){
                 </Avatar>
                 <p className="text-amber-50 font-normal text-center "><i className="text-laranja-motor font-black">KM</i> Finance</p>
             </div>
+
+            <p className="text-gray-500">{meses[mes].toUpperCase()} {ano}</p>
             
-            <Button variant="outline" className="p-2 cursor-pointer font-bold hover:text-amarelo-alerta hover:bg-background-secundario hover:outline-none hover:border-none">
+            {/*<Button variant="outline" className="p-2 cursor-pointer font-bold hover:text-amarelo-alerta hover:bg-background-secundario hover:outline-none hover:border-none">
                 <CircleFadingArrowUpIcon/> Processar PDF
-            </Button>
+            </Button>*/}
 
         </div>
     )
