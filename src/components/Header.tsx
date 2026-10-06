@@ -9,7 +9,7 @@ export function Header(){
 
     const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
     return(
-        <div className="border-b-2 border-amarelo-alerta w-full flex items-center justify-between pb-5  max-w-xl">
+        <div className="border-b-2 border-amarelo-alerta w-full flex items-center justify-between pb-5 p-3 max-w-xl">
             <div className="flex items-center gap-3">
                 <Avatar>
                     <AvatarFallback>Will</AvatarFallback>
@@ -20,10 +20,6 @@ export function Header(){
             </div>
 
             <p className="text-gray-500">{meses[mes].toUpperCase()} {ano}</p>
-            
-            {/*<Button variant="outline" className="p-2 cursor-pointer font-bold hover:text-amarelo-alerta hover:bg-background-secundario hover:outline-none hover:border-none">
-                <CircleFadingArrowUpIcon/> Processar PDF
-            </Button>*/}
 
         </div>
     )
