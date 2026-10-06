@@ -1,18 +1,34 @@
 import './App.css'
-import { Header } from '../src/components/Header'
-import { BottonBar } from './components/BottonBar'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
+import AppLayout from "./layouts/AppLayout"
+
+import Resumo from "./pages/Resumo"
+import Corridas from "./pages/Corrida"
+import Financeiro from "./pages/Financeiro"
+import Veiculo from "./pages/Veiculo"
+import Analytics from "./pages/Analytics"
 
 function App() {
 
-
   return (
-    <div className="justify-start pt-5 bg-background-primario  flex h-screen flex-col items-center">
+    <BrowserRouter>
+      <Routes>
       
-      <Header></Header>
-      <BottonBar></BottonBar>
+        <Route element={<AppLayout />}>
 
-    </div>
+          <Route path="/resumo" element={<Resumo />} />
+          <Route path="/corridas" element={<Corridas />} />
+          <Route path="/financeiro" element={<Financeiro />} />
+          <Route path="/veiculo" element={<Veiculo />} />
+          <Route path="/analytics" element={<Analytics />} />
+
+        </Route>
+
+        <Route path='/' element={<Navigate to="/resumo" replace/>}/>
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
