@@ -1,11 +1,10 @@
-import { Card, CardContent, CardFooter, CardHeader, CardDescription } from "@/ui/card";
+import { Card, CardContent, CardFooter } from "@/ui/card";
 import { Progress } from "@/ui/progress";
 import { BanknoteArrowUp, BanknoteArrowDown, BadgeDollarSign, ChevronRight } from "lucide-react"
 
 export default function Resumo() {
     return (
         <div className="flex flex-col gap-5 w-full">
-            {/* Bloco 1: Faturamento, Custos e Lucro */}
             <Card className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none border-none">
                 <CardContent className="pt-6">
                     <ul className="flex flex-col gap-2">
@@ -35,7 +34,6 @@ export default function Resumo() {
                 </CardFooter>
             </Card>
             
-            {/* Bloco 2: KM e Viagens */}
             <Card className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none border-none">
                 <CardContent className="py-6">
                     <ul className="flex justify-around items-center">
@@ -55,7 +53,6 @@ export default function Resumo() {
                 </CardContent>
             </Card>
 
-            {/* Bloco 3: R$/KM e R$/HORA (Alinhados lado a lado) */}
             <div className="flex w-full max-w-lg mx-auto gap-4">
                 <Card className="flex-1 bg-background-secundario text-white rounded-none border-none">
                     <CardContent className="flex flex-col gap-2 p-6 items-start">
@@ -72,7 +69,6 @@ export default function Resumo() {
                 </Card>
             </div>
 
-            {/* Bloco 4: Plataformas */}
             <Card className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none border-none">
                 <CardContent className="flex flex-col gap-6 py-6">
                     <div className="flex items-center gap-2 text-laranja-motor">
@@ -80,10 +76,10 @@ export default function Resumo() {
                         <span className="font-bold text-gray-400 text-xs tracking-wider">PLATAFORMAS</span>
                     </div>
 
-                    <Progress value={68} className="h-3 bg-gray-300 rounded-none [&>div]:bg-laranja-motor" />
+                    <Progress value={68} className="h-3 bg-gray-300 rounded-none [&>div]:bg-gray-300" />
 
                     <div className="flex justify-between items-start pt-2">
-                        {/* Status Uber */}
+
                         <div className="flex flex-col gap-1 w-1/2">
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-gray-300 rounded-sm"></div>
@@ -94,7 +90,6 @@ export default function Resumo() {
                             <span className="text-gray-500 text-xs">1.240 km</span>
                         </div>
 
-                        {/* Status 99 */}
                         <div className="flex flex-col gap-1 w-1/2 pl-4">
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-laranja-motor rounded-sm"></div>
