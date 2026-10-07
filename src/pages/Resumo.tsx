@@ -1,9 +1,10 @@
-import { Card, CardContent, CardFooter } from "@/ui/card";
-import { BanknoteArrowUp, BanknoteArrowDown, BadgeDollarSign } from "lucide-react"
+import { Card, CardContent, CardFooter, CardHeader, CardDescription } from "@/ui/card";
+import { Progress } from "@/ui/progress";
+import { BanknoteArrowUp, BanknoteArrowDown, BadgeDollarSign, ChevronRight } from "lucide-react"
 
 export default function Resumo() {
     return (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 w-full">
             <Card size="sm" className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none ">
                 <CardContent>
                     <ul className=" flex flex-col gap-2">
@@ -37,15 +38,15 @@ export default function Resumo() {
                 </CardFooter>
             </Card>
             
-            <Card size="sm" className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none">
+            <Card size="sm" className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none flex justify-center ">
                 <CardContent>
                     <ul className=" flex gap-2 justify-around items-center">
-                        <li className="flex flex-col justify-between items-center gap-3">
-                            <span className="font-bold text-gray-400">KM RODADOS</span>
+                        <li className="flex flex-col justify-between items-center gap-3 tracking-wider ">
+                            <span className="font-bold text-gray-400 tracking-wider">KM RODADOS</span>
                             <span className="text-2xl">1.880</span>
                         </li>
                         
-                        <li className="flex flex-col justify-between items-center gap-3">
+                        <li className="flex flex-col justify-between items-center gap-3 tracking-wider">
                             <span className="font-bold text-gray-400">PASSAGEIRO</span>
                             <span className="text-2xl">1.340</span>
                         </li>
@@ -56,7 +57,72 @@ export default function Resumo() {
                         </li>
                     </ul>
                 </CardContent>
-                
+            </Card>
+
+            <div className="flex justify-center gap-6">
+                <Card size="sm" className="bg-background-secundario text-white rounded-none flex justify-around w-1/3">
+                    <CardContent className="flex flex-col gap-3 tracking-wider">
+                        <span className="font-bold text-gray-400">R$ / KM</span>
+                        <span className="text-2xl">R$ 1,51</span>
+                    </CardContent>
+                </Card>
+
+                <Card size="sm" className="bg-background-secundario text-white rounded-none flex justify-around w-1/3">
+                    <CardContent className="flex flex-col gap-3 tracking-wider">
+                        <span className="font-bold text-gray-400">R$ / HORA</span>
+                        <span className="text-2xl">R$ 28,45</span>
+                    </CardContent>
+                </Card>
+            </div>
+
+            <Card size="sm" className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none flex justify-center ">
+                <CardContent>
+                    <div>
+                    <ChevronRight />
+                    <span>PLATAFORMAS</span>
+                    </div>
+
+                    <Progress value={75} className=""/>
+
+                </CardContent>
+
+                <CardContent className="flex ">
+                    <Card>
+                        <CardHeader>
+                            <CardDescription>
+                                <div>
+                                    <div></div>
+                                    <span>99</span>
+                                </div>
+
+                                <span>25%</span>
+                            
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p>R$ 1.478</p>
+                            <span>640 km</span>
+                        </CardContent>
+                    </Card>
+                    
+                    <Card>
+                        <CardHeader>
+                            <CardDescription>
+                                <div>
+                                    <div></div>
+                                    <span>UBER</span>
+                                </div>
+
+                                <span>75%</span>
+                            
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p>R$ 3.141</p>
+                            <span>1.240 km</span>
+                        </CardContent>
+                    </Card>
+                </CardContent>
             </Card>
         </div>
     )
