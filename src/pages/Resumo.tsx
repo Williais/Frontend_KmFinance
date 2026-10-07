@@ -36,7 +36,7 @@ export default function Resumo() {
                     <span className="font-bold text-4xl">R$ 2.845,60</span>
                 </CardFooter>
             </Card>
-
+            
             <Card size="sm" className="mx-auto w-full max-w-lg bg-background-secundario text-white rounded-none">
                 <CardContent>
                     <ul className=" flex gap-2 justify-around items-center">
@@ -44,7 +44,7 @@ export default function Resumo() {
                             <span className="font-bold text-gray-400">KM RODADOS</span>
                             <span className="text-2xl">1.880</span>
                         </li>
-
+                        
                         <li className="flex flex-col justify-between items-center gap-3">
                             <span className="font-bold text-gray-400">PASSAGEIRO</span>
                             <span className="text-2xl">1.340</span>
